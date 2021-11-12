@@ -28,11 +28,11 @@ basic.forever(function () {
     intensite = pins.analogReadPin(AnalogPin.P0)
     if (intensite >= 120) {
         vert()
-    } else if (intensite >= 160) {
-        bleu()
-    } else if (intensite >= 200) {
+    } else if (intensite < 200 && intensite >= 121) {
         rouge()
-    } else if (intensite >= 240) {
+    } else if (intensite < 300 && intensite >= 201) {
+        bleu()
+    } else if (intensite < 400 && intensite >= 301) {
         mauve()
     } else {
         blanc()
